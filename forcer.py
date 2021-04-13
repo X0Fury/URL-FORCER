@@ -25,7 +25,7 @@ if gg.status_code != 404:
         letra = C
     print(f'{B}ALVO {R}=> {G}{alvo} {B}Status Code: {letra}{gg.status_code}{C}')
 else:
-    print('oi')
+    print(f"URL PASSADA JA POSSUI UM STATUS CODE DE {R}404")
 brutes = open("pastas.txt")
 data_agora = date.today()
 for linha in brutes:
