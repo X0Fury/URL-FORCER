@@ -13,6 +13,7 @@ RT = '\033[;0m'
 os.system("clear")
 os.system("figlet URL FORCER")
 print(f"    {B}v {G}1.0\n{R}By Helior")
+print('Exemplo: https://docs.microsoft.com/')
 alvo = input(f'{R}Digite A Url Do Seu Alvo: {B}')
 gg = requests.get(alvo, verify=False)
 if gg.status_code != 404:
