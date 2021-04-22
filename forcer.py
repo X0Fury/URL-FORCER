@@ -1,5 +1,6 @@
 import requests
 import urllib3
+import sys
 from datetime import date
 import os
 import urllib
@@ -11,6 +12,9 @@ Y = '\033[1;33m'
 G = '\033[1;32m'
 RT = '\033[;0m'
 os.system("clear")
+tipo_usuario = os.system("whoami")
+if tipo_usuario != 'root':
+    sys.exit(f'{R}VOCE PRECISA SER UM USUARIO ROOT...')  
 os.system("figlet URL FORCER")
 print(f"    {B}v {G}1.0\n{R}By Helior")
 print("Exemplo: https://docs.microsoft.com/")
@@ -43,4 +47,4 @@ for linha in brutes:
            letra = C
          print(f'{B}[{G}{data_agora}]{B} Possivel endereco encontrado! {R}=> {G}{alvo}{linha} {B}Status Code: {letra}{status_codefoda}{C}')
     except:
-      print()
+        open("erros.txt", "w")
